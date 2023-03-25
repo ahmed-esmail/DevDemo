@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Features.Products.Queries.GetProductList;
+using Domain;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,7 +19,7 @@ namespace DevDemo.Controllers
     }
     public async Task<IActionResult> Index()
     {
-      var data = await _mediator.Send(new GetPostListQuery());
+      List<GetPostsListViewModel> data = await _mediator.Send(new GetPostListQuery());
       return View(data);
     }
 
