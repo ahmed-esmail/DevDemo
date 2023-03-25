@@ -6,10 +6,9 @@
   .DataSource(Model)
   .KeyExpr("ID")
   .Columns(c => {
-                  c.Add().DataField("CompanyName");
-                  c.Add().DataField("City");
-                  c.Add().DataField("State");
-                  c.Add().DataField("Phone");
-                  c.Add().DataField("Fax");
+    c.Add().DataField("Name");
+    c.Add().DataField("Description");
+    c.Add().DataField("Price");
+    c.Add().DataField("InStock");
   })
   )
